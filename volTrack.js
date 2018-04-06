@@ -2,15 +2,19 @@
 //District Data
 const district = Object.create({}, {
     number: {
+        enumerable: true,
         writable: true,
         value: 5},
     zipCodes: {
+        enumerable: true,
         writable: true,
         value: [37013, 37015, 37025, 37027, 37029, 37032, 37035, 37036, 37043, 37051, 37055, 37062, 37064, 37072, 37076, 37080, 37082, 37086, 37115, 37122, 37135, 37138, 37143, 37146, 37165, 37181, 37187, 37189, 37201, 37203, 37204, 37205, 37206, 37207, 37208, 37209, 37210, 37211, 37212, 37213, 37214, 37215, 37216, 37217, 37218, 37219, 37220, 37221, 37228, 37240, 37243, 37246]},
     cities: {
+        enumerable: true,
         writable: true,
         value: ['Belle Meade', 'Berry Hill', 'Dickson', 'Forest Hills', 'Goodlettsville', 'Oak Hill', 'Ridgetop']},
     counties:{
+        enumerable: true,
         writable: true,
         value: ['Cheatham', 'Davidson', 'Dickson']}
 });
@@ -61,6 +65,7 @@ const donorFormURL = 'https://www.mycampaigndonationform.com/form';
 //Object containing upcoming events
 const upcomingEvents = Object.create({}, {
     event1: {
+        enumerable: true,
         writable: true,
         value: {
         name: 'Luncheon with Labor leaders',
@@ -68,6 +73,7 @@ const upcomingEvents = Object.create({}, {
         location: 'VFW'
     }},
     event2: {
+        enumerable: true,
         writable: true,
         value: {
         name: 'Speech at Hillsboro High School',
@@ -75,6 +81,7 @@ const upcomingEvents = Object.create({}, {
         location: 'Hillsboro High'
     }},
     event3: {
+        enumerable: true,
         writable: true,
         value: {
         name: 'Door Knocking with Volunteers',
@@ -82,6 +89,7 @@ const upcomingEvents = Object.create({}, {
         location: 'Belle Meade'
     }},
     event4: {
+        enumerable: true,
         writable: true,
         value: {
         name: 'Phoneathon',
@@ -215,21 +223,33 @@ const regVote = 'https://sos.tn.gov/products/elections/register-vote';
 //     }
 // });
 
-const platformBuilder = function () {
-    let platformPoints = document.createElement('ul');
-    for (let i = 0; i < Object.keys(platform).length; i++) {
+const listBuilder = function (listObject) {
+    let listPoints = document.createElement('ul');
+    for (let i = 0; i < Object.keys(listObject).length; i++) {
         let listItem = document.createElement('li');
-        let keyName = Object.keys(platform)[i];
-        let newListItemText = document.createTextNode(`${keyName}: ${platform[keyName]}`);
+        let keyName = Object.keys(listObject)[i];
+        let newListItemText = document.createTextNode(`${keyName}: ${listObject[keyName]}`);
         listItem.appendChild(newListItemText);
-        platformPoints.appendChild(listItem);
+        listPoints.appendChild(listItem);
     }
-    return platformPoints;
+    return listPoints;
 };
 
-let platformList = platformBuilder();
-let targetUL = document.getElementById('dist5');
+let platformList = listBuilder(platform);
+let targetUL = document.getElementById('platform');
 targetUL.appendChild(platformList);
+
+let districtList = listBuilder(district);
+newTargetUL = document.getElementById('district');
+newTargetUL.appendChild(districtList); 
+
+let upcomingList = listBuilder(upcomingEvents);
+let newTargetEventUL = document.getElementById('upcoming');
+newTargetEventUL.appendChild(upcomingList);
+
+
+
+
 
 
 
