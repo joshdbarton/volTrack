@@ -106,9 +106,11 @@ const modEvents = (key, newInput) => {
 //object containing a single volunteer's info 
 const volunteer = Object.create({}, {
     name: {
+        enumerable: true,
         writable: true,
         value: "#"},
     address: {
+        enumerable: true,
         writable: true,
         value: {
         street: '#',
@@ -117,15 +119,19 @@ const volunteer = Object.create({}, {
         zip: '#'
     }},
     email: {
+        enumerable: true,
         writable: true,
         value: '#'},
     phoneNumber: {
+        enumerable: true,
         writable: true,
         value: '#'},
     availability: {
+        enumerable: true,
         writable: true,
         value: '#'},
     interests: {
+        enumerable: true,
         writable: true,
         value: {
         calling: true,
@@ -144,15 +150,19 @@ const modifyVol = (key, newInput) => {
 //biography of candidate
 const bio = Object.create({}, {
     name: {
+        enumerable: true,
         writable: true,
         value: 'Elizabeth Sanger'},
     birthplace: {
+        enumerable: true,
         writable: true,
         value: 'Kodiak, AK'},
     education: {
+        enumerable: true,
         writable: true,
         value: 'University of Hard Knocks'},
     story: {
+        enumerable: true,
         writable: true,
         value: 'Lorem ipsum dolor amet sustainable yr pickled, normcore squid leggings echo park whatever direct trade. Butcher occupy street art franzen mixtape. Stumptown narwhal franzen hexagon. Gentrify narwhal vape cray, cornhole YOLO tilde beard lo-fi austin mumblecore. Cornhole wayfarers butcher street art. Lo-fi salvia migas pinterest ethical swag, street art cloud bread subway tile hammock bushwick vape 8-bit DIY. Pinterest man bun pickled succulents chillwave XOXO edison bulb, normcore roof party vexillologist activated charcoal hot chicken tilde viral photo booth. Copper mug fanny pack pickled freegan edison bulb cray air plant taxidermy vinyl. Banjo vice kinfolk hot chicken. Four loko jianbing keffiyeh migas everyday carry thundercats. Ennui fingerstache selfies try-hard art party vexillologist.'}
 });
