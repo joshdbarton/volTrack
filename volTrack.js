@@ -23,25 +23,30 @@ const distModify = (key, newInput ) => {
 
 //Platform Data
 const platform = Object.create({}, {
-    taxes: {value:'Elizabeth thinks that some taxes are good and some are bad.',
-    enumerable: true,
-    writable: true
+    taxes: {
+        enumerable: true,
+        writable: true,
+        value:'Elizabeth thinks that some taxes are good and some are bad.'
     },
-    jobs: {value: 'Elizabeth is a pro-jobs candidate. She likes jobs.',
-    enumerable: true,
-    writable: true
+    jobs: {
+        enumerable: true,
+        writable: true,
+        value: 'Elizabeth is a pro-jobs candidate. She likes jobs.'
     },
-    infrastructure: {value: 'Elizabeth is a bridge-builder',
-    enumerable: true,
-    writable: true
+    infrastructure: {
+        enumerable: true,
+        writable: true,
+        value: 'Elizabeth is a bridge-builder'
     },
-    healthCare: { value: 'More hospitals please.',
-    enumerable: true,
-    writable: true 
+    healthCare: { 
+        enumerable: true,
+        writable: true,
+        value: 'More hospitals please.'
     },
-    crime: { value: 'Elizabeth is against crime. Crime is bad.',
-    enumerable: true,
-    writable: true 
+    crime: { 
+        enumerable: true,
+        writable: true, 
+        value: 'Elizabeth is against crime. Crime is bad.'
     }
 });
 
@@ -171,12 +176,61 @@ const misstate = Object.create({}, {
 });
 
 //function to modify mission statement
-const modifyMiss = (key, newInput) => {
-    missate.statement[key] = newInput;
+const modifyMiss = (newInput) => {
+    missate.statement = newInput;
 }
 
 //URL for vote registration
 const regVote = 'https://sos.tn.gov/products/elections/register-vote';
+
+
+
+// article feature on the DOM
+
+// const platform = Object.create({}, {
+//     taxes: {
+//         enumerable: true,
+//         writable: true,
+//         value:'Elizabeth thinks that some taxes are good and some are bad.'
+//     },
+//     jobs: {
+//         enumerable: true,
+//         writable: true,
+//         value: 'Elizabeth is a pro-jobs candidate. She likes jobs.'
+//     },
+//     infrastructure: {
+//         enumerable: true,
+//         writable: true,
+//         value: 'Elizabeth is a bridge-builder'
+//     },
+//     healthCare: { 
+//         enumerable: true,
+//         writable: true,
+//         value: 'More hospitals please.'
+//     },
+//     crime: { 
+//         enumerable: true,
+//         writable: true, 
+//         value: 'Elizabeth is against crime. Crime is bad.'
+//     }
+// });
+
+const platformBuilder = function () {
+    let platformPoints = document.createElement('ul');
+    for (let i = 0; i < Object.keys(platform).length; i++) {
+        let listItem = document.createElement('li');
+        let keyName = Object.keys(platform)[i];
+        let newListItemText = document.createTextNode(`${keyName}: ${platform[keyName]}`);
+        listItem.appendChild(newListItemText);
+        platformPoints.appendChild(listItem);
+    }
+    return platformPoints;
+};
+
+let platformList = platformBuilder();
+let targetUL = document.getElementById('dist5');
+targetUL.appendChild(platformList);
+
 
 
 
