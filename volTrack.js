@@ -28,6 +28,8 @@ const platform = Object.create({}, {
     }
 });
 
+const donorFormURL = 'https://www.mycampaigndonationform.com/form';
+
 const upcomingEvents = Object.create({}, {
     event1: {value: {
         name: 'Luncheon with Labor leaders',
@@ -51,8 +53,6 @@ const upcomingEvents = Object.create({}, {
     }}
 });
 
-const donorFormURL = 'https://www.mycampaigndonationform.com/form';
-
 const volunteer = Object.create({}, {
     name: {value: "#"},
     address: {value: {
@@ -72,7 +72,29 @@ const volunteer = Object.create({}, {
     }}
 });
 
+const bio = Object.create({}, {
+    name: {value: 'Elizabeth Sanger'},
+    birthplace: {value: 'Kodiak, AK'},
+    education: {value: 'University of Hard Knocks'},
+    story: {value: 'Lorem ipsum dolor amet sustainable yr pickled, normcore squid leggings echo park whatever direct trade. Butcher occupy street art franzen mixtape. Stumptown narwhal franzen hexagon. Gentrify narwhal vape cray, cornhole YOLO tilde beard lo-fi austin mumblecore. Cornhole wayfarers butcher street art. Lo-fi salvia migas pinterest ethical swag, street art cloud bread subway tile hammock bushwick vape 8-bit DIY. Pinterest man bun pickled succulents chillwave XOXO edison bulb, normcore roof party vexillologist activated charcoal hot chicken tilde viral photo booth. Copper mug fanny pack pickled freegan edison bulb cray air plant taxidermy vinyl. Banjo vice kinfolk hot chicken. Four loko jianbing keffiyeh migas everyday carry thundercats. Ennui fingerstache selfies try-hard art party vexillologist.'}
+});
 
+const imgGallery = Object.create({}, {
+    headshot: {value: 'https://www.campaignwebsite.com/images/headshot'},
+    famPic: {value: 'https://www.campaignwebsite.com/images/famPic'},
+    constPic: {value: 'https://www.campaignwebsite.com/images/constPic'}
+});
+
+const misstate = Object.create({}, {
+    statement: {
+        enumerable: true,
+        writable: false, 
+        value: 'Lorem ipsum dolor amet jean shorts snackwave authentic tilde readymade raw denim squid umami. Raw denim mlkshk marfa palo santo hammock, hoodie green juice disrupt try-hard. Art party green juice you probably havent heard of them hashtag subway tile semiotics. Drinking vinegar narwhal pop-up kale chips la croix edison bulb tousled. Fingerstache vinyl lomo, taiyaki squid photo booth af prism poutine tumeric banjo kitsch. Vape pok pok scenester hashtag plaid skateboard slow-carb health goth tbh heirloom knausgaard. Pabst polaroid intelligentsia poutine iceland drinking vinegar banjo fixie craft beer franzen.'
+    }
+})
+
+
+const regVote = 'https://sos.tn.gov/products/elections/register-vote';
 
 
 
