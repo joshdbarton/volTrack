@@ -141,6 +141,16 @@ const volunteer = Object.create({}, {
     }}
 });
 
+//Function to create volunteer objects:
+function Volunteer (name, address, email, phone, availability, interests) {
+    this.name = name;
+    this.address = address;
+    this.email = email;
+    this.phone = phone;
+    this.availability = availability;
+    this.interests = interests;
+}
+
 //function to modify volunteer info
 const modifyVol = (key, newInput) => {
     volunteer[key] = newInput;
